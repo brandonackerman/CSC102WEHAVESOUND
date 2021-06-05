@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<!--We Have Sound!
+    writtten by: Brandon Ackerman
+    CSC102, 05 June 2021-->
+<!--
+
+   ,___                     ______               
+  /   /        o           (  /     _/_          
+ /    __,  (  ,  _ _   __   -/--, , /  , , _   __
+(___/(_/(_/_)_(_/ / /_(_)  _/  (_/_(__(_/_/ (_(_)
+
+*************************************************************************************************************************                                                
+It's the year 2055. Inter-planetary travel has been restricted due to the uprising of the Cerulean Faction in the Nexus Galaxy.
+Weary travellers search in earnest for a place to let off steam. The place of choice: Casino Futuro! Located in the outer
+rings of the Jupiter Space Complex, Casino Futuro is host to highest class players of the galaxy's favorite game - Craps!
+*************************************************************************************************************************
+-->
+
+<html lang="en">
+
+<head>
+
+    <title>
+        UAT Space Program
+    </title>
+
+
+    <link rel="stylesheet" href="style.css">
+    <script src="code.js"></script>
+
+    <head>
+
+    <body>
+        <!--making a table to hold h1 title and jpg-->
+
+        <table>
+            <td><img src="UATSpace-1.png"></td>
+            <td>
+                <h1>
+                    UAT Space Program
+                </h1>
+            </td>
+        </table>
+
+        <!--separate table "table1" controlled by style.css for data-->
+        <div class="table1">
+
+            <table border="5" width="100%">
+                <col style="width: 10%;">
+                <col style="width: 10%;">
+                <thead>
+                    <th>Data Type</th>
+                    <th>Reading</th>
+                </thead>
+                <tbody>
+                    <tr id="seconds">
+                        <td>Time Elapsed:</td>
+                        <td>15 Seconds</td>
+                    </tr>
+                    <tr id="latitude">
+                        <td>Latitude:</td>
+                        <td>0</td>
+                    </tr>
+                    <tr id="longitude"></tr>
+                    <td>Longitude:</td>
+                    <td>0</td>
+                    </tr>
+                    <tr id="gps_elevation"></tr>
+                    <td> GPS Altitude:</td>
+                    <td>0</td>
+                    </tr>
+                    <tr id="bmpSensor_altitude"></tr>
+                    <td>BMP Sensor Altitude:</td>
+                    <td>30383.04</td>
+                    </tr>
+                    <tr id="bmpSensor_pressure"></tr>
+                    <td>BMP Sensor Pressure:</td>
+                    <td>2.34</td>
+                    </tr>
+                    <tr id="bmpSensor_temp"></tr>
+                    <td>BMP Sensor Temperature:</td>
+                    <td>0</td>
+                    </tr>
+                    <tr id="digSensor_temp"></tr>
+                    <td>Digital Sensor Temperature:</td>
+                    <td>24.12</td>
+                    </tr>
+                    <tr id="cssSensor_temp"></tr>
+                    <td>CSS Sensor Temperature:</td>
+                    <td>25</td>
+                    </tr>
+                    <tr id="cssSensor_eC02"></tr>
+                    <td>CSS Sensor eCO2:</td>
+                    <td>400</td>
+                    </tr>
+                    <tr id="cssSensor_TVOC"></tr>
+                    <td>CSS Sensor TVOC:</td>
+                    <td>0</td>
+                    </tr>
+                    <tr id="UV"></tr>
+                    <td>UV:</td>
+                    <td>0</td>
+                    </tr>
+                    <tr id="accelX"></tr>
+                    <td>Accel X:</td>
+                    <td>-0.87</td>
+                    </tr>
+                    <tr id="accelY"></tr>
+                    <td>Accel Y:</td>
+                    <td>-0.02</td>
+                    </tr>
+                    <tr id="accelZ"></tr>
+                    <td>Accel Z:</td>
+                    <td>9.61</td>
+                    </tr>
+                    <tr id="magneticX"></tr>
+                    <td>Magnetic X:</td>
+                    <td>0.13</td>
+                    </tr>
+                    <tr id="magneticY"></tr>
+                    <td>Magnetic Y:</td>
+                    <td>0.57</td>
+                    </tr>
+                    <tr id="magnetY"></tr>
+                    <td>Magnetic Z:</td>
+                    <td>-0.24</td>
+                    </tr>
+                    <tr id="gyroX"></tr>
+                    <td>Gyro X:</td>
+                    <td>4.66</td>
+                    </tr>
+                    <tr id="gyroY"></tr>
+                    <td>Gyro Y:</td>
+                    <td>0.01</td>
+                    </tr>
+                    <tr id="gyroZ"></tr>
+                    <td>Gyro Z:</td>
+                    <td>-0.4</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!--start and stop buttons linked to code.js with onclick functions-->
+        <p id="countdownTimer">Countdown Status...</p>
+        <button class="button" id="startButton" onclick="start();">start</button>
+        <button class="button" id="stopButton" onclick="stop();">stop</button>
+        <br>
+        <br>
+        <button class="button" onclick="playStation()">Play Elton</button><br>
+        <button class="button" onclick="playBowie()">Play Bowie</button><br>
+
+        <script>
+       //no longer need alert
+       //alert("Test of the Alert function");
+        </script>
+
+        <!--put the craps game in a container, controlled by style.css-->
+        <div class="container">
+            <img src="casinoFrame.png" style="width:50%;">
+            <div class="crapsText">
+                <h2>Play Craps!</h2>
+                <div id="die1Results">die 1 status...</div><br>
+                <div id="die2Results">die 2 status...</div><br>
+                <div id="sumResults">Craps game status...</div><br>
+                <div id="crapsResults">Craps game status...</div><br>
+                <button class="button" onclick="playCraps();">start</button>
+            </div>
+
+        </div>
+    </body>
+
+</html>
